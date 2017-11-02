@@ -1,89 +1,100 @@
 # alternativas
-alternativas: y alternativa
-    Ec AGRICOLA:
-        Carga Horaria TC: 18.18
-        Carga Horaria TP: 11
-        Disponibiliad: 8.55
-        TC Docentes: 91.67
-        Docentes MS: 75
-        Docentes PHD: 2.00
-        Cobertura carrera: 11
-        Especialización: 55.56
-   AGROINDUSTRIAL:
-        Carga Horaria TC: 20
-        Carga Horaria TP: 11.54
-        Disponibiliad: 18.53
-        TC Docentes: 56.67
-        Docentes MS: 56.67
-        Docentes PHD: 2.00
-        Cobertura carrera: 17
-        Especialización: 47.06 
-    ADM EMP AGR:
-        Carga Horaria TC: 16.56
-        Carga Horaria TP: 9.5
-        Disponibiliad: 19.11
-        CT Docentes: 69.23
-        Docentes MS: 76.92
-        Docentes PHD: 1.00
-        Cobertura carrera: 9
-        Especialización: 50
-    HORTI FRUTICULTURA:
-        Carga Horaria TC: 13.4
-      	Carga Horaria TP: 13.5
-	      Disponibiliad: 9.8
-	      Docentes TC: 71.43
-	      Docentes MS: 57.14
-	      Docentes PHD: 0
-	      Cobertura carrera: 5
-	      Especialización: 25
-        
-        Gol:
-nombre: Entorno
-preferencias:
-pairwise:
-	      - [Academia, Institucional, 3]
-	      - [Academia, Curr_Invest, 7]
-	      - [Academia, Soporte, 3]
-	      - [Institucional, Curr_Invest, 9]
-	      - [Institucional, Soporte, 1]
-	      - [Curr_Invest, Soporte, 1/7]
-uteq:	
-	    Academia:
-	      preferencias:
-	        pairwise:
-	          - [Calidad, Carrera, 2]
-	      uteq:
-	Calidad:
-	      preferencias:
-	        pairwise:
-	          - [Dedicación, Formación, 2]
-	          - [Dedicación, Pertinencia, 5]
-	          - [Formación, Pertinencia, 3]
-	      uteq:
-	Carrera:
-	      preferencias:
-	        pairwise:
-	          - [Contratación, Derechos_Doc, 2]
-	          - [Contratación, Remuneración, 5]
-	          - [Derechos_Doc, Remuneración, 3]
-	      uteq:
-	Dedicación:
-	          preferencias: 
-	            pairwise:
-	              - [Carga Horaria TC, Carga Horaria TP, 9]
-	              - [Carga Horaria TC, Disponibilidad, 9]
-	              - [Carga Horaria TC, Docentes TC, 1]
-	              - [Carga Horaria TP, Disponibilidad, 1/2]
-	              - [Carga Horaria TP, Docentes TC, 5]
-	              - [Disponibilidad, Docentes TC, 1]
-	          uteq: * alternativas
-	Remuneración:
-	          preferencias: 
-	            pairwise:
-	              - [Docentes MS, Docentes PHD, 9]
-	          uteq: * alternativas
-	Derechos_Doc:
-	          preferencias: 
-	            pairwise:
-	              - [Cobertura carrera, Especialización, 9]
-	          uteq: * alternativas
+	Alternatives: & alternatives
+	    Ec AGRICOLA:
+	        Carga Horaria TC: 18.18
+	        Carga Horaria TP: 11
+	        Disponible: 8.55
+	        TC Docentes: 91.67
+	        Docentes MS: 75
+	        Docentes PHD: 2.00
+	        Cobertura carrera: 11
+	        Especialización: 55.56
+	   AGROINDUSTRIAL:
+	        Carga Horaria TC: 20
+	        Carga Horaria TP: 11.54
+	        Disponibiliad: 18.53
+	        TC Docentes: 56.67
+	        Docentes MS: 56.67
+	        Docentes PHD: 2.00
+	        Cobertura carrera: 17
+	        Especialización: 47.06 
+	    ADM EMP AGR:
+	        Carga Horaria TC: 16.56
+	        Carga Horaria TP: 9.5
+	        Disponible: 19.11
+	        CT Docentes: 69.23
+	        Docentes MS: 76.92
+	        Docentes PHD: 1.00
+	        Cobertura carrera: 9
+	        Especialización: 50
+	    HORTI FRUTICULTURA:
+	        Carga Horaria TC: 13.4
+	      	 Carga Horaria TP: 13.5
+		 Disponible: 9.8
+		 Docentes TC: 71.43
+		 Docentes MS: 57.14
+		 Docentes PHD: 0
+		 Cobertura carrera: 5
+		 Especialización: 25
+	        
+Goal:	        
+	name: Entorno
+	description: >
+This is a classic
+author: cvmarquez
+preferences:
+
+	
+	pairwise:
+		      - [Academia, Institucional, 3]
+		      - [Academia, Curr_Invest, 7]
+		      - [Academia, Soporte, 3]
+		      - [Institucional, Curr_Invest, 9]
+		      - [Institucional, Soporte, 1]
+		      - [Curr_Invest, Soporte, 1/7]
+	children:	
+
+		    Academia:
+		      preferences:
+		        pairwise:
+		          - [Calidad, Carrera, 2]
+		      children:
+
+		Calidad:
+		      preferences:
+		        pairwise:
+		          - [Dedicación, Formación, 2]
+		          - [Dedicación, Pertinencia, 5]
+		          - [Formación, Pertinencia, 3]
+		      children:
+
+		Carrera:
+		      preferences:
+		        pairwise:
+		          - [Contratación, Derechos_Doc, 2]
+		          - [Contratación, Remuneración, 5]
+		          - [Derechos_Doc, Remuneración, 3]
+		      children:
+
+		Dedicación:
+		          preferences: 
+		            pairwise:
+		              - [Carga Horaria TC, Carga Horaria TP, 9]
+		              - [Carga Horaria TC, número de serie, 9]
+		              - [Carga Horaria TC, Docentes TC, 1]
+		              - [Carga Horaria TP, en blanco, 1/2]
+		              - [Carga Horaria TP, Docentes TC, 5]
+		              - [Disponible, Docentes TC, 1]
+		          children: * alternatives
+		Remuneración:
+		          preferences: 
+		            pairwise:
+		              - [Docentes MS, Docentes PHD, 9]
+		          children: *alternatives
+
+		Derechos_Doc:
+		          preferences: 
+		            pairwise:
+		              - [Cobertura carrera, Especialización, 9]
+		          children: *alternatives
+
